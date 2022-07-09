@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { SchedullingLine } from "../components/SchedullinLine";
 import { getAllRoutes } from "../services/routes.services";
 
 export const Routes = () => {
@@ -16,10 +17,6 @@ export const Routes = () => {
       // make sure to catch any error
       .catch(console.error);
   }, []);
-
-  function goDetail(e){
-    window.location.href = "/" + String(e.detail);
-  }
 
   return (
     <div style={{textAlign:"-webkit-center", marginTop:"30px"}}>
@@ -46,6 +43,7 @@ export const Routes = () => {
             })}
         </tbody>
       </table>
+      <SchedullingLine props={isOnline}/>
     </div>
   );
 };
