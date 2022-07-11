@@ -19,7 +19,7 @@ export const Routes = () => {
   }, []);
 
   return (
-    <div style={{textAlign:"-webkit-center", marginTop:"30px"}}>
+    <div style={{ textAlign: "-webkit-center", marginTop: "30px" }}>
       <table className="table w-60">
         <thead>
           <tr>
@@ -43,7 +43,7 @@ export const Routes = () => {
             })}
         </tbody>
       </table>
-      <SchedullingLine props={isOnline}/>
+      {/* {isOnline && <SchedullingLine props={isOnline} />} */}
     </div>
   );
 };

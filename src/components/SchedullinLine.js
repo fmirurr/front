@@ -1,24 +1,20 @@
-import React, { Component, useState } from "react";
+import React from "react";
+import Timeline from "react-calendar-timeline/lib";
 import moment from "moment";
 
-import Timeline, {
-  TimelineHeaders,
-  SidebarHeader,
-  DateHeader,
-} from "react-calendar-timeline/lib";
-
 export const SchedullingLine = (props) => {
-  console.log(props);
+  const driver_ids = [{driver_id:1, name:"Diego"}]
+  console.log("shecdulling", props);
+  
   return (
     <div>
       Rendered by SchedullingLine!
-      {/* {props ? 
         <Timeline
+          groups={driver_ids}
           items={props}
           defaultTimeStart={moment().add(-12, "hour")}
           defaultTimeEnd={moment().add(12, "hour")}
         />
-       : null} */}
     </div>
   );
 };
